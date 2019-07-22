@@ -4,8 +4,7 @@
 # This script is made with the following purpose: Does the PC have writable directories that could be 
 # targeted by DLL-hijacking utilizing Windows DLL Search-order. 
 
-$allPaths = $env:path
-$allPaths.Split(";") | ForEach {
+$env:path.Split(";") | ForEach {
     $currentPath = $_
     if ($_ -ne "") { #If the $env:path ends with a ; the script will throw an error
         (get-acl $_).access | Where-Object {$_.FileSystemRights -like "Write*" -or $_.FileSystemRights -like "FullControl" -or $_.FileSystemRights -like "Modify*"} | ForEach {
