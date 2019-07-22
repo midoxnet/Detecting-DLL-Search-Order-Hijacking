@@ -9,7 +9,7 @@ $allPaths = $env:path
 $currentPath = "" 
 $allPaths.Split(";") | ForEach {
     $currentPath = $_
-    if ($_ -ne "") {
+    if ($_ -ne "") { #If the $env:path ends with a ; the script will throw an error
         (get-acl $_).access | Where-Object {$_.FileSystemRights -like "Write*" -or $_.FileSystemRights -like "FullControl" -or $_.FileSystemRights -like "Modify*"} | ForEach {
             $user = $_.IdentityReference
             $permission = $_.FileSystemRights
