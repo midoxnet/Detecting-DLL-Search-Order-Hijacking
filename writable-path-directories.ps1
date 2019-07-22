@@ -17,7 +17,7 @@ $allPaths.Split(";") | ForEach {
             #Ignore the following users. They should have write access to some of these anyway
             $ignoreUsers = @("NT SERVICE\TrustedInstaller", "NT AUTHORITY\SYSTEM", "BUILTIN\Administrator", "APPLICATION PACKAGE AUTHORITY\ALL APPLICATION PACKAGES")
             if ($ignoreUsers -notcontains $user) {
-                echo "$user can write to $currentPath"
+                echo "[VULNERABLE] $user can write to $currentPath"
             } 
         }
     }
