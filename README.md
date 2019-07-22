@@ -1,5 +1,6 @@
 # DLL Hijacking
 
+The repository contains the following: 
+Script 1: This script will go through the directory listed in the PATH 
 
-(Spoiler: I am not a powershell-expert. For tips on how to improve the script, please let me know.)
-
+(Spoiler: I am no powershell-expert.)
