@@ -11,7 +11,7 @@ One thing is to audit the folders listed in the PATH-variable, another thing is 
 
 **Task Scheduler task:** \
 New Programs, that adds new directories to the PATH-variable will likely be installed after auditing has been enabled. This will require the Script 2 to be run again. Since we are using Sysmon to monitor changes being made to the PATH-variable, it's possible to automate this. The Task Scheduler task runs the Powershell Script as the local SYSTEM account, when ever it detects Sysmon Event 12 containing the following string: HKLM\System\CurrentControlSet\Control\Session Manager\Environment\Path.  
-*Remember to change the file location of the powershell script so that the task will run correctly*
+*N.B: Remember to change the file location of the powershell script so that the task will run correctly*
 
 We now have a fully functional auditing of directories listed in the PATH-variable. DLL-Hijacking is not prevented, but it is now possible to detect. 
 
