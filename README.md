@@ -1,5 +1,8 @@
 # Detecting DLL Hijacking
 
+**Purpose of this repository**: \
+For more information about what DLL Hijacking is and how attackers can attack your application, I suggest you read the following: https://www.sans.org/cyber-security-summit/archives/file/summit_archive_1493862085.pdf. It is the goal of this repository to create a solid detection for DLL Hijacking attempts. They will often be used as a way for the attacker to escalate privileges from user to either Administrator or SYSTEM. 
+
 **Script 1**: \
 The script will go through each directory listed in the PATH-variable and print those directories that a user, without administrative privileges, can write files to. This script is only meant as a testing tool to create an overview of which users can write files to these specific directories. The script will ignore users like Administrator and SYSTEM.  
 
