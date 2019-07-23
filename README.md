@@ -1,7 +1,5 @@
 # DLL Hijacking
 
-#### This repository contains the following files: 
-
 **Script 1**: \
 The script will go through each directory listed in the PATH-variable and print those directories that a user, without administrative privileges, can write files to. This script is only meant as a testing tool to create an overview of which users can write files to these specific directories. The script will ignore users like Administrator and SYSTEM.  
 
