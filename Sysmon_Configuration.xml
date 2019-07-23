@@ -1,6 +1,6 @@
 <!--
-  sysmon-config | Audit PATH changes 
-  author: PovlTekstTV
+  sysmon-config | Purpose: Audit PATH-variable changes 
+  Author: PovlTekstTV
   Date: 22/07/2019
 -->
 
@@ -12,10 +12,5 @@
 		<RegistryEvent onmatch="include">
 			<TargetObject condition="end with">HKLM\System\CurrentControlSet\Control\Session Manager\Environment\Path</TargetObject> <!-- Check for changes to the PATH variable -->
 		</RegistryEvent>
-		
-		<!-- For now ignore the following -->
-		<ProcessCreate onmatch="include"></ProcessCreate>
-		<ProcessTerminate onmatch="include"></ProcessTerminate>
-		<FileCreateTime onmatch="include"></FileCreateTime>
 	</EventFiltering>
 </Sysmon>
