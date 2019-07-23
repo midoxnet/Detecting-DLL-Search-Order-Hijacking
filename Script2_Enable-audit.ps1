@@ -1,8 +1,7 @@
-﻿# Sript created by Povl TekstTV on 21. july 2019
+﻿# Sript created by Povl TekstTV on 22. july 2019
 # The following script will go through each directory in the "PATH" System variable. 
 # For each directory it will test to see if any normal user has either modify, write or full control. 
-# This script is made with the following purpose: Does the PC have writable directories that could be 
-# targeted by DLL-hijacking utilizing Windows DLL Search-order. 
+# If this is the case, then the script will enable auditing of that folder. The audit is set for "Everyone".
 
 $env:path.Split(";") | ForEach {
     $currentPath = $_
