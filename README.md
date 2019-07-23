@@ -1,4 +1,4 @@
-# Detecting DLL Hijacking
+# Detecting DLL Search Order Hijacking
 
 **Purpose of this repository**: \
 For more information about what DLL Hijacking is and how attackers can attack your application, I suggest you read the following: https://www.sans.org/cyber-security-summit/archives/file/summit_archive_1493862085.pdf. It is the goal of this repository to create a solid detection for DLL Hijacking attempts. They will often be used as a way for the attacker to escalate privileges from user to either Administrator or SYSTEM. DLL Hijacking is also a technique referenced by Mitre: https://attack.mitre.org/techniques/T1038/ 
