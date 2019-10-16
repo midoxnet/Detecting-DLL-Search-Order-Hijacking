@@ -12,7 +12,7 @@ $env:path.Split(";") | ForEach {
             $permission = $_.FileSystemRights
 
             #Ignore the following users. They should have write access to some of these anyway
-            $ignoreUsers = @("NT SERVICE\TrustedInstaller", "NT AUTHORITY\SYSTEM", "BUILTIN\Administrator", "APPLICATION PACKAGE AUTHORITY\ALL APPLICATION PACKAGES")
+            $ignoreUsers = @("NT SERVICE\TrustedInstaller", "NT AUTHORITY\SYSTEM", "BUILTIN\Administrators", "APPLICATION PACKAGE AUTHORITY\ALL APPLICATION PACKAGES")
             if ($ignoreUsers -notcontains $user) {
                 echo "[VULNERABLE] $user can write to $currentPath"
             } 
